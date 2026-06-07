@@ -1,11 +1,11 @@
-```sql
--- Total Revenue Generated
+
+# Total Revenue Generated
 
 SELECT ROUND(SUM(SALES), 2) AS Total_Revenue
 FROM sales_data;
 
 
--- Top 10 Customers by Revenue
+# Top 10 Customers by Revenue
 
 SELECT CUSTOMERNAME,
        ROUND(SUM(SALES), 2) AS Revenue
@@ -15,7 +15,7 @@ ORDER BY Revenue DESC
 LIMIT 10;
 
 
--- Revenue by Product Line
+# Revenue by Product Line
 
 SELECT PRODUCTLINE,
        ROUND(SUM(SALES), 2) AS Revenue
@@ -24,7 +24,7 @@ GROUP BY PRODUCTLINE
 ORDER BY Revenue DESC;
 
 
--- Monthly Revenue Analysis
+# Monthly Revenue Analysis
 
 SELECT YEAR_ID,
        MONTH_ID,
@@ -34,7 +34,7 @@ GROUP BY YEAR_ID, MONTH_ID
 ORDER BY YEAR_ID, MONTH_ID;
 
 
--- Revenue by Country
+# Revenue by Country
 
 SELECT COUNTRY,
        ROUND(SUM(SALES), 2) AS Revenue
@@ -43,7 +43,7 @@ GROUP BY COUNTRY
 ORDER BY Revenue DESC;
 
 
--- Sales by Deal Size
+# Sales by Deal Size
 
 SELECT DEALSIZE,
        ROUND(SUM(SALES), 2) AS Revenue
